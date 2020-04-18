@@ -60,10 +60,10 @@ public class AlgebraCalc  {
 		}
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-Scanner keyboard=new Scanner(System.in);
+
+Scanner keyboard = new Scanner(System.in);
 System.out.println("Enter the operation - Quadratic(1) and Cubic(2)");
-AlgebraCalcUsingObjects Method=new AlgebraCalcUsingObjects();
+AlgebraCalc Method=new AlgebraCalc();
 operation=keyboard.nextInt();
 if(operation==1)
 {
@@ -94,7 +94,8 @@ else if(operation==2)
     Method.userInput();
     Method.CDiscriminant();
 }
-	
+
+keyboard.close();
 }
 }
 }
