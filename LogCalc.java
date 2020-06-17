@@ -25,25 +25,28 @@ public class LogCalc {
 			// TODO Auto-generated method stub
 			LogCalc logcalc = new LogCalc();
 			Scanner sc = new Scanner(System.in);
-			System.out.println("What do you want to calculate - ln, log, or e: ");
+			System.out.println("What do you want to calculate - ln, log, or e:");
 			String op = sc.next();
 
-			if(op == "ln") 
+			if(op.equals("ln") == true) 
 			{
+				System.out.println("Enter a value:");
 				Double value = sc.nextDouble();
 				System.out.println(logcalc.NaturalLog(value));
 			}
-			else if(op == "ln") 
+			else if(op.equals("log") == true) 
 			{
+				System.out.println("Enter a value:");
 				Double value = sc.nextDouble();
 				System.out.println(logcalc.Log(value));
 			}
-			else if(op == "e") 
+			else if(op.equals("e") == true) 
 			{
+				System.out.println("Enter a value:");
 				Double value = sc.nextDouble();
 				System.out.println(logcalc.e(value));
 			}
-			
+
 			sc.close();
 
 		}
