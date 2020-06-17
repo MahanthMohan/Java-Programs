@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class TempConverter {
 
 static Scanner sc = new Scanner(System.in);
@@ -11,7 +12,7 @@ static Scanner sc = new Scanner(System.in);
 
 	static Double getCelsius(double fahrenheit)
 	{
-		Double Celsius = 5/9 * (fahrenheit - 32);
+		Double Celsius = (5 * (fahrenheit - 32)) / 9;
 		return Celsius;
 	}
 	public static void main(String[] args) {
@@ -21,7 +22,7 @@ static Scanner sc = new Scanner(System.in);
 		double temp = sc.nextDouble();
 		System.out.println("What is the unit of measurement?: ");
 		String unit = sc.next();
-		
+
 		if(unit.equals("F"))
 		{
 			System.out.println(getCelsius(temp));
@@ -33,12 +34,8 @@ static Scanner sc = new Scanner(System.in);
 
 		sc.close();
 	}
-		
 
-		
-		
-		
 
-	}
+}
 
 
