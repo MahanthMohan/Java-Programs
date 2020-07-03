@@ -1,80 +1,91 @@
 import java.lang.Math;
 import java.util.Scanner;
+
 public class TrigonometricFunctions {
-	static double adj,opp,hyp,x,result;static int op,subop;
-	static Scanner keyboard= new Scanner(System.in);
+	static double adj,opp,hyp,x,result;
+	static Scanner sc  =  new Scanner(System.in);
+
 	public void getData()
 	{
 	System.out.println("Enter adjacent side taking theta angle as ref");
-	adj = keyboard.nextDouble();
+	adj = sc.nextDouble();
 	System.out.println("Enter opposite side taking theta angle as ref");
-	opp=keyboard.nextDouble();
+	opp = sc.nextDouble();
 	System.out.println("Enter hypotenuse side taking theta angle as ref");
-	hyp=keyboard.nextDouble();
+	hyp = sc.nextDouble();
 	}
-		public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		TrigonometricFunctions Method=new TrigonometricFunctions();
-	System.out.println("Is it a right triangle? - Yes(1),No(2)");
-	op=keyboard.nextInt();
-	if(op==1)
+	public static void main(String[] args) {
+	// TODO Auto-generated Method stub
+	TrigonometricFunctions trig = new TrigonometricFunctions();
+	System.out.println("Is it a right triangle? - y/N: ");
+	String op = sc.next();
+	if(op.equals("y"))
 	{
-		Method.getData();
-		System.out.println("What do you want to calculate - Sine(1),Cosine(2),Tangent(3),Cosecant(4),Secant(5),Cotangent(6),arcsine(7),arccos(8),arctan(9)");
-		subop=keyboard.nextInt();
-		if(subop==1)
+		trig.getData();
+		System.out.println("What do you want to calculate - sin, cos, tan, csc, sec, cot, arcsin, arccos, arctan");
+		String subop = sc.next();
+		if(subop.equals("sin"))
 		{
-			result=(opp/hyp);
+			result = (opp/hyp);
 			System.out.println(result);
 		}
-		else if(subop==2)
+
+		else if(subop.equals("cos"))
 		{
-			result=(adj/hyp);
+			result = (adj/hyp);
 			System.out.println(result);
 		}
-		else if(subop==3)
+
+		else if(subop.equals("tan"))
 		{
-			result=(opp/adj);
+			result = (opp/adj);
 			System.out.println(result);
 		}
-		else if(subop==4)
+
+		else if(subop.equals("csc"))
 		{
-			result=(1/(opp/hyp));
+			result = (1/(opp/hyp));
 			System.out.println(result);
 		}
-		else if(subop==5)
+
+		else if(subop.equals("sec"))
 		{
-			result=(1/(adj/hyp));
+			result = (1/(adj/hyp));
 			System.out.println(result);
 		}
-		else if(subop==6)
+
+		else if(subop.equals("cot"))
 		{
-			result=(1/(opp/adj));
+			result = (1/(opp/adj));
 			System.out.println(result);
 		}
-		else if(subop==7)
+
+		else if(subop.equals("arcsin"))
 		{
 			System.out.println("Enter the value");
-			x=keyboard.nextInt();
-			result=(Math.asin(x));
+			x = sc.nextInt();
+			result = (Math.asin(x));
 			System.out.println(result);
 		}
-		else if(subop==8)
+
+		else if(subop.equals("arccos"))
 		{
 			System.out.println("Enter the value");
-			x=keyboard.nextInt();
-			result=(Math.acos(x));
+			x = sc.nextInt();
+			result = (Math.acos(x));
 			System.out.println(result);
 		}
-		else if(subop==9)
+		
+		else if(subop.equals("arctan"))
 		{
 			System.out.println("Enter the value");
-			x=keyboard.nextInt();
-			result=(Math.atan(x));
+			x = sc.nextInt();
+			result = (Math.atan(x));
 			System.out.println(result);
 		}
 	}
-	else if(op==2)
+
+	else if(op.equals("N"))
 	{
 		System.out.println("Trigonometric ratios for non-right triangles cannot be calculated");
 		System.out.println("Thank you for using this program");

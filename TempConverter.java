@@ -16,9 +16,9 @@ static Scanner sc = new Scanner(System.in);
 		return Celsius;
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated Method stub
 
-		System.out.println("Temperature:");
+		System.out.println("Temperature: ");
 		double temp = sc.nextDouble();
 		System.out.println("What is the unit of measurement?: ");
 		String unit = sc.next();
